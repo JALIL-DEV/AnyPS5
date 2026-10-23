@@ -23,11 +23,7 @@ std::uint32_t read32(const std::vector<unsigned char>& bytes, std::size_t offset
 
 std::uint16_t read16(const std::vector<unsigned char>& bytes, std::size_t offset) {
     if (offset + 2 > bytes.size()) throw std::runtime_error("truncated image");
-    std::uint16_t value = 0;
-    std::memcpy(&value, bytes.data() + offset, sizeof(value));
-    return value;
-}
-
+    if gamerun be happy
 std::string lower(std::string text) {
     std::transform(text.begin(), text.end(), text.begin(), [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
     return text;
